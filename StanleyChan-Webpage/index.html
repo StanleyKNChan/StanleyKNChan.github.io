@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Stanley Chan's Website</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .services {
+      margin-bottom: 40px;
+      padding: 25px 35px 45px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .services .icon {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .services .icon i {
+      font-size: 2.5em;
+      color: #fff;
+    }
+
+    .services .desc {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .services .desc h3 {
+      font-size: 1.3em;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .services .desc p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9em;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .services.color-1 { background: rgba(108, 178, 235, 0.85); }  /* Lighter blue */
+    .services.color-2 { background: rgba(241, 144, 142, 0.85); }  /* Softer red */
+    .services.color-3 { background: rgba(130, 195, 143, 0.85); }  /* Softer green */
+    .services.color-4 { background: rgba(187, 143, 206, 0.85); }  /* Softer purple */
+    .services.color-5 { background: rgba(121, 199, 191, 0.85); }  /* Softer teal */
+    .services.color-6 { background: rgba(142, 157, 216, 0.85); }  /* Softer blue-purple */
+
+    .services:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .animate-box {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .second-brain-link {
+      display: inline-block;
+      transition: all 0.3s ease;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .second-brain-link:hover {
+      transform: translateY(-5px);
+    }
+
+    .second-brain-link img {
+      transition: all 0.3s ease;
+    }
+
+    .second-brain-link:hover img {
+      filter: brightness(1.1);
+    }
+
+    .social-links .tableau-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      filter: brightness(0) invert(1);  /* Makes the icon white */
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Stanley Chan</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://public.tableau.com/app/profile/stanleykinnok.chan" class="tableau" target="_blank">
+        <img src="assets/img/tech/tableau_vector.svg" alt="Tableau" class="tableau-icon">
+      </a>
+      <a href="https://github.com/StanleyKinnokChan" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/staneykinnok-chan/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house"></i>&nbsp;&nbsp;<span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i>&nbsp;&nbsp;<span>About</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-gear"></i>&nbsp;&nbsp;<span>Skills & Certifications</span></a></li>
+        <li><a href="#what-i-do" class="nav-link scrollto"><i class="bi bi-list-task"></i>&nbsp;&nbsp;<span>What I do?</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i>&nbsp;&nbsp;<span>Resume</span></a></li>
+        <li><a href="#clients" class="nav-link scrollto"><i class="bi bi-building"></i>&nbsp;&nbsp;<span>Clients</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Stanley Chan</h2>
+        <p>I'm a <span class="typed" data-typed-items="Data Engineer, Data Analyst, Data Consultant">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <!-- <p>Professional and enthusiastic data consultant with 5 years of data experience and a robust blend of analytical and engineering proficiency. Delivered high-quality data products for senior leadership across a wide range of industries, resulting in significant cost savings and boosting business values. Committed to ongoing development and maintaining expertise in modern data technologies.</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Data Consultant/ Engineer/ Analyst</h2>
+            <!-- <p class="fst-italic py-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p> -->
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 Feb 1997</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>London, UK</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>stanleykinnok.chan@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Right-to-work:</strong> <span>Yes & No sponsorhip required</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              Professional and enthusiastic data consultant with 5 years of data experience and a robust blend of analytical and engineering proficiency. Delivered high-quality data products for senior leadership across a wide range of industries, resulting in significant cost savings and boosting business values. Committed to ongoing development and maintaining expertise in modern data technologies.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+    </section><!-- End Resume Section -->
+
+    <!-- Second Brain Section -->
+    <section id="second-brain" class="second-brain section light-background">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="fst-italic mb-4" data-aos="fade-up">
+            "Being a guy who dedicates in the data field, I always seek to improve my technical knowledge. 
+            However I will inevitably forget somethings and that's why I need a second brain." - Stanley
+            </p>
+            <a href="https://stanleykinnokchan.github.io/second_brain/" target="_blank" class="second-brain-link" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/brain.gif" alt="Second Brain" class="img-fluid" style="max-width: 100px;">
+              <div class="mt-3">Visit My Second Brain</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Second Brain Section -->
+
+    <!-- Stats Section -->
+
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> <span> completed</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-cup-hot"></i>
+              <span data-purecounter-start="0" data-purecounter-end="330" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Coffee</strong> <span>consumed</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-alarm"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3696" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours</strong> <span>of project experience</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Satisfaction Rate</strong> <span>of clients</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills & Certifications</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <section id="certifications" class="certifications section">
+          <h2>Certifications</h2>
+          <div class="certification-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/Tableau data analyst.png" alt="Tableau Aata Analyst" style="width: 100px; height: 100px;">
+              <p>Tableau Data Analyst</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/AWS SSA.png" alt="AWS SSA" style="width: 100px; height: 100px;">
+              <p>AWS Solution Architect Associate</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/dbt.png" alt="Certification Badge 3" style="width: 100px; height: 100px;">
+              <p>dbt Certificed Analystic Engineer</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/Databrick data engineer associate.png" alt="Databrick data engineer associate" style="width: auto; height: 100px;">
+              <p>Databrick Data Engineer Associate</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/SnowProCore.png" alt="SnowProCore" style="width: 100px; height: 100px;">
+              <p>SnowPro Core Certification</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/Alteryx Expert.png" alt="Alteryx Expert" style="width: 100px; height: 100px;">
+              <p>Alteryx Expert Certification</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/alteryx server admin.png" alt="Alteryx Server Admin" style="width: 100px; height: 100px;">
+              <p>Alteryx Server Admin. Certification</p>
+            </div>
+            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
+              <img src="assets/img/certification/Power BI.png" alt="Power BI Data Analyst Associate" style="width: 100px; height: 100px;">
+              <p>Power BI Data Analyst Associate</p>
+            </div>
+          </div>
+        </section><!-- /Skills Section -->
+      </div>
+
+    <!-- What I do? Section -->
+    <section id="what-i-do" class="what-i-do section" style="background-color: white;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What I do?</h2>
+        <p>These are my services for my company and previous clients.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="services color-1">
+              <span class="icon">
+                <i class="bi bi-search"></i>
+              </span>
+              <div class="desc">
+                <h3>Project Scoping & Data Discovery</h3>
+                <p>Understanding business requirements and translating them into technical solutions. Working closely with stakeholders to define project scope.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="services color-2">
+              <span class="icon">
+                <i class="bi bi-card-checklist"></i>
+              </span>
+              <div class="desc">
+                <h3>Data Analysis & Reporting</h3>
+                <p>Advanced data analysis using SQL, Python, and R. Creating comprehensive reports and dashboards to drive data-informed decision making.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="services color-3">
+              <span class="icon">
+                <i class="bi bi-bar-chart"></i>
+              </span>
+              <div class="desc">
+                <h3>Data Visualization</h3>
+                <p>Creating intuitive and interactive visualizations using Tableau and Power BI. Transforming complex data into actionable insights.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="services color-4">
+              <span class="icon">
+                <i class="bi bi-shuffle"></i>
+              </span>
+              <div class="desc">
+                <h3>ELT & ETL Pipeline</h3>
+                <p>Building robust data pipelines using modern tools like DBT, Airflow, and BigQuery. Ensuring efficient data transformation processes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="services color-5">
+              <span class="icon">
+                <i class="bi bi-gear-wide-connected"></i>
+              </span>
+              <div class="desc">
+                <h3>Automation</h3>
+                <p>Automating repetitive tasks and workflows using Python and Shell scripting. Reducing manual effort and improving efficiency.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center animate-box" data-aos="fade-up" data-aos-delay="600">
+            <div class="services color-6">
+              <span class="icon">
+                <i class="bi bi-cloud-upload"></i>
+              </span>
+              <div class="desc">
+                <h3>Cloud Deployment</h3>
+                <p>Deploying and managing data solutions on cloud platforms like GCP and AWS. Ensuring scalable and secure infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /What I do? Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>MRes In Biodiversity, Evolution and Conservation</h4>
+              <h5>2021 - 2022</h5>
+              <p><em>The University College London (UCL), London, UK</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>BSc In Ecology & Biodiversity (Intensive Path)</h4>
+              <h5>2016 - 2021</h5>
+              <p><em>The University of Hong Kong, Hong Kong</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>DATA CONSULTANT (ANALYTICS + ENGINEERING)</h4>
+              <h5>Dec 2022 - Present</h5>
+              <p><em>The Information Lab, London, UK </em></p>
+              <ul>
+                <li>Completed a 4-month intensive and competitive data consultancy training program led by industry experts and visionaries.</li>
+                <li>Defined the scopes of projects and business requirement, followed by development and delivery of a Minimum Viable Product (MVP) for client's companies, overseeing the pipelining and visualization projects.</li>
+                <li>Actively contributed to cross-functional teams, participating in sprint planning, daily stand-ups, presentation and retrospectives. Facilitated efficient project delivery and fostered collaboration among team members.</li>
+                <li>Functioned as a BI Specialist within the Centre of Excellence, catering to a diverse clientele of over 1200 clients. Provided expert guidance and troubleshooting solutions for BI solution inquiries, ensuring optimal support and client satisfaction.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>ANALYTICS ENGINEER</h4>
+              <h5>Oct 2024 – Present</h5>
+              <p><em>Virgin Media O2 (VMO2), London, UK</em></p>
+              <ul>
+                <li>Modelled and transformed 96 billion rows of TV product data and construct the business layer and downstream data marts in BigQuery using DBT, ensuring comprehensive testing and documentation. CI/CD were controlled through GitLab.</li>
+                <li>Collaborated with the Data Democratization team on a decommissioning project, migrating complex data logic from Looker to Tableau, resulting in enhanced self-serving capabilities and streamlined data workflows.</li>
+                <li>Automated the monthly revenue and viewing report generation for service providers via python with >600 times faster.</li>
+                <li>Utilized Atlan for data cataloguing, Confluence for documentation, and Jira for Agile project management and tracking.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>VISUALIZATION ENGINEER</h4>
+              <h5>Apr 2024 - Oct 2024</h5>
+              <p><em>Jaguar Land Rover (JLR), Conventry, UK</em></p>
+              <ul>
+                <li>Implemented Agile methodology (Scrum) and task management in Jira. Collaborated and communicated closely with other data engineers to define table schemas, metrics hierarchy and business logics. Data pipelines were built using SQL in BigQuery, which were orchestrated via Apache Airflow with Jinja templates hosted on a Google Cloud VM.</li>
+                <li>Developed a comprehensive ‘Single Source of Truth’ Tableau dashboard for global retailers training reports distributed worldwide. The resulting product allowed the analysis of over 5,000 retailers and 44,000 employees globally.</li>
+                <li>Applied SDLC principles throughout the dashboard development lifecycle across DEV, UAT, and PROD stages. Managed Tableau Server for access control, usage and scheduled data refresh.</li>
+                <li>Developed Python and Shell script to produce utilities and automate BAU processes to reduce the manual effort by 70%. Conducted ad-hoc SQL queries to flag anomalies and validate data accuracy in the presentation layer.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+
+    <!-- Testimonials Section -->
+    <section id="clients" class="clients section" style="background-color: white;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Clients</h2>
+        <p>I have had the privilege of working with these incredible organizations. (no particular order)</p>
+      </div><!-- End Section Title -->
+
+      <!-- Clients Logo Section -->
+      <div class="container clients-section mb-5 pb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="clients-list d-flex flex-wrap justify-content-center align-items-center gap-4">
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.bdo.co.uk/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/BDO_Deutsche_Warentreuhand_Logo.png" alt="BDO" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.eif.org/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/eif.jpg" alt="EIF" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.theinformationlab.co.uk/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/Infolab logo.png" alt="The Information Lab" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.merlinentertainments.biz/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/merlin-entertainments-logo-2.png" alt="Merlin-Entertainments" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.northernrailway.co.uk/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/northen.png" alt="Northern" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://opfistula.org/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/operation fistula.png" alt="Operation Fistula" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.stowefamilylaw.co.uk" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/Stowe-Logo_sponsor-version.png" alt="Stowe-Family-Law" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.bbr.com/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/BBR - Copy.png" alt="Berry Bros. & Rudd" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.pallisercap.com/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/palliser.png" alt="Palliser Capital" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://www.jaguarlandrover.com/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/JLR - Copy.png" alt="JLR" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+              <div class="clients-list__item" style="width: 200px; height: 100px;">
+                <a href="https://news.virginmediao2.co.uk/" class="d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/VMO2.png" alt="VMO2" class="img-fluid" style="max-width: 180px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Clients Logo Section -->
+
+    </section><!-- /Testimonials Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p> <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
