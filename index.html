@@ -125,6 +125,95 @@
       vertical-align: middle;
       filter: brightness(0) invert(1);  /* Makes the icon white */
     }
+
+    .certifications-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .certification-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 200px;
+    }
+
+    .certification-cell:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .certification-cell img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .certification-cell p {
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .navmenu a {
+      color: #333;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navmenu a:hover {
+      background-color: #f0f0f0;
+      color: #007bff;
+    }
+
+    .navmenu a.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+    }
+
+    .scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background-color: #0056b3;
+    }
+
+    #what-i-do .services {
+      margin-bottom: 30px; /* Adjusted bottom margin for better spacing */
+    }
   </style>
 
 </head>
@@ -282,7 +371,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1" class="purecounter"></span><span> 
               <p><strong>Satisfaction Rate</strong> <span>of clients</span></p>
             </div>
           </div><!-- End Stats Item -->
@@ -326,39 +415,42 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <section id="certifications" class="certifications section">
-
           <h2>Certifications</h2>
-          <div class="certification-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/Tableau data analyst.png" alt="Tableau Aata Analyst" style="width: 100px; height: 100px;">
+          <div class="certifications-container">
+            <div class="certification-cell">
+              <img src="assets/img/certification/Tableau data analyst.png" alt="Tableau Data Analyst">
               <p>Tableau Data Analyst</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/AWS SSA.png" alt="AWS SSA" style="width: 100px; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/AWS SSA.png" alt="AWS Solution Architect Associate">
               <p>AWS Solution Architect Associate</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/dbt.png" alt="Certification Badge 3" style="width: 100px; height: 100px;">
-              <p>dbt Certificed Analystic Engineer</p>
+            <div class="certification-cell">
+              <img src="assets/img/certification/MS Azure Data Fundamental.svg" alt="MS Azure Data Fundamental">
+              <p>AWS Solution Architect Associate</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/Databrick data engineer associate.png" alt="Databrick data engineer associate" style="width: auto; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/dbt.png" alt="dbt Certified Analystic Engineer">
+              <p>dbt Certified Analystic Engineer</p>
+            </div>
+            <div class="certification-cell">
+              <img src="assets/img/certification/Databrick data engineer associate.png" alt="Databrick Data Engineer Associate">
               <p>Databrick Data Engineer Associate</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/SnowProCore.png" alt="SnowProCore" style="width: 100px; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/SnowProCore.png" alt="SnowPro Core Certification">
               <p>SnowPro Core Certification</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/Alteryx Expert.png" alt="Alteryx Expert" style="width: 100px; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/Alteryx Expert.png" alt="Alteryx Expert Certification">
               <p>Alteryx Expert Certification</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/alteryx server admin.png" alt="Alteryx Server Admin" style="width: 100px; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/alteryx server admin.png" alt="Alteryx Server Admin. Certification">
               <p>Alteryx Server Admin. Certification</p>
             </div>
-            <div class="certification-cell" style="margin: 10px; text-align: center; width: 120px;">
-              <img src="assets/img/certification/Power BI.png" alt="Power BI Data Analyst Associate" style="width: 100px; height: 100px;">
+            <div class="certification-cell">
+              <img src="assets/img/certification/Power BI.png" alt="MS Power BI Data Analyst Associate">
               <p>Power BI Data Analyst Associate</p>
             </div>
           </div>
@@ -472,14 +564,22 @@
               <h4>MRes In Biodiversity, Evolution and Conservation</h4>
               <h5>2021 - 2022</h5>
               <p><em>The University College London (UCL), London, UK</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+              <ul>
+                <li>Grade: MeritGrade</li>
+                <li>Research topic 1: Geometric morphometrics of Scomber scombrus</li>
+                <li>Research topic 2: Impact of global forest structure on the insect species richness</li>
+              </ul>
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
               <h4>BSc In Ecology & Biodiversity (Intensive Path)</h4>
               <h5>2016 - 2021</h5>
               <p><em>The University of Hong Kong, Hong Kong</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <ul>
+                <li>Grade: Upper Second-Class Honours</li>
+                <li>Accredited path from Royal Biology Society. Covering wide range of topics, from ecology, biology, conversation, research and computation. </li>
+                <li>Data Analystic A+, Biostatistics A</li>
+              </ul>
             </div><!-- Edn Resume Item -->
 
           </div>
@@ -648,6 +748,79 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function navmenuScrollspy() {
+      navmenulinks.forEach(navmenulink => {
+        if (!navmenulink.hash) return;
+        let section = document.querySelector(navmenulink.hash);
+        if (!section) return;
+        let position = window.scrollY + 200;
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+          document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+          navmenulink.classList.add('active');
+        } else {
+          navmenulink.classList.remove('active');
+        }
+      });
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.navmenu a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script>
+    function toggleScrollTop() {
+      if (scrollTop) {
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
+    }
+  </script>
+
+  <script>
+    function toggleScrollTop() {
+      const scrollTop = document.querySelector('.scroll-top');
+      if (scrollTop) {
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
+    }
+
+    window.addEventListener('scroll', toggleScrollTop);
+  </script>
+
+  <script>
+    function toggleScrollTop() {
+      const scrollTop = document.querySelector('.scroll-top');
+      if (scrollTop) {
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
+    }
+
+    window.addEventListener('scroll', toggleScrollTop);
+  </script>
+
+  <script>
+    function toggleScrollTop() {
+      const scrollTop = document.querySelector('.scroll-top');
+      if (scrollTop) {
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
+    }
+
+    window.addEventListener('scroll', toggleScrollTop);
+  </script>
 
 </body>
 
